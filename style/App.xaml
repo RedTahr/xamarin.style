@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="style.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<Color x:Key="backgroundColor">#33302E</Color>
+			<Color x:Key="titleColor">White</Color>
+			<Color x:Key="detailColor">Red</Color>
+			<Color x:Key="captionColor">Pink</Color>
+			<x:String x:Key="titleMode">WordWrap</x:String>
+			<x:Double x:Key="buttonHeight">60</x:Double>
+
+			<Style x:Key="Title" TargetType="Label" BaseResourceKey="TitleStyle">
+            	<Setter Property="TextColor" Value="{DynamicResource titleColor}" />
+				<Setter Property="LineBreakMode" Value="{DynamicResource titleMode}" />
+        	</Style>
+			<Style x:Key="Detail" TargetType="Label" BaseResourceKey="DetailStyle">
+            	<Setter Property="TextColor" Value="{DynamicResource detailColor}" />
+        	</Style>
+			<Style x:Key="Caption" TargetType="Label" BaseResourceKey="CaptionStyle">
+            	<Setter Property="TextColor" Value="{DynamicResource captionColor}" />
+        	</Style>
+
+			<Style x:Key="ButtonStyle" TargetType="Button" >
+				<Setter Property="HeightRequest" Value="{DynamicResource buttonHeight}" />
+			</Style>
+			
+        	<Style x:Key="Background" TargetType="VisualElement">
+           		<Setter Property="BackgroundColor" Value="{DynamicResource backgroundColor}" />
+        	</Style>
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>
